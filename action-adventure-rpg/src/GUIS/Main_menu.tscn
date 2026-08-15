@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cbiefyjwd3nf0"]
+
+[ext_resource type="Theme" uid="uid://bpbg0t7wi7a40" path="res://src/Themes/main_menu_themes.tres" id="1_6ckfi"]
+[ext_resource type="Script" uid="uid://b0vupe52xj0u8" path="res://src/Scripts/Main_menu_scripts/UIManager.gd" id="2_3ryee"]
+[ext_resource type="Texture2D" uid="uid://w2irr788ool2" path="res://assets/rpg_backgrounds/Mountain-Dusk.png" id="2_hs6di"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d0ebl"]
+
+[node name="Control" type="Control" unique_id=1564165186]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_6ckfi")
+script = ExtResource("2_3ryee")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=827720260]
+layout_mode = 0
+offset_left = 714.0
+offset_right = 901.0
+offset_bottom = 647.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_d0ebl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=215216360]
+layout_mode = 2
+theme_override_constants/separation = 90
+alignment = 1
+
+[node name="Singleplayer_Button" type="Button" parent="Panel/VBoxContainer" unique_id=2048193668]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+text = "Play Legends Mode"
+
+[node name="Multiplayer_Button" type="Button" parent="Panel/VBoxContainer" unique_id=1717036437]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+text = "Play Champions Mode"
+
+[node name="Help_Button" type="Button" parent="Panel/VBoxContainer" unique_id=1720223915]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+text = "How to Play?"
+
+[node name="Quit_Button" type="Button" parent="Panel/VBoxContainer" unique_id=709731227]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+text = "Quit Game"
+
+[node name="Game_Label" type="Label" parent="." unique_id=523581415]
+layout_mode = 1
+offset_left = 31.0
+offset_top = 251.0
+offset_right = 609.0
+offset_bottom = 302.0
+theme_override_colors/font_color = Color(0, 0.09225113, 0.20213985, 1)
+theme_override_font_sizes/font_size = 50
+text = "Action Adventure RPG"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1782759963]
+z_index = -37
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -26.0
+offset_top = -101.0
+offset_right = 1179.0
+offset_bottom = 662.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_hs6di")

@@ -1,0 +1,24 @@
+[gd_resource type="Theme" format=3 uid="uid://bpbg0t7wi7a40"]
+
+[ext_resource type="FontFile" uid="uid://dyboxb7nualxl" path="res://assets/rpg_fonts/PeaberryBase.ttf" id="1_d0ebl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0ebl"]
+bg_color = Color(5.053729e-07, 0.31729746, 0.34946164, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5f4ec"]
+bg_color = Color(0.32982934, 0.122920506, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u6jj0"]
+
+[resource]
+Button/colors/font_color = Color(0.19126248, 0.29092064, 0.68796414, 1)
+Button/colors/font_hover_color = Color(0.69952196, 0.3960029, 0, 1)
+Button/colors/font_pressed_color = Color(0.17378783, 0.00016325951, 0.5181106, 1)
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_d0ebl")
+Button/styles/hover = SubResource("StyleBoxFlat_d0ebl")
+Button/styles/normal = SubResource("StyleBoxFlat_5f4ec")
+Label/colors/font_color = Color(0.19718564, 0.20752299, 0.7264257, 1)
+Label/font_sizes/font_size = 25
+Label/fonts/font = ExtResource("1_d0ebl")
+Panel/styles/panel = SubResource("StyleBoxEmpty_u6jj0")
