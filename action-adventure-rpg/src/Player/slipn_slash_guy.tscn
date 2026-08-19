@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://3pavw1q1nt7"]
+
+[ext_resource type="Script" uid="uid://csllyfby1bcoo" path="res://src/Scripts/Object_scripts/slip_slash_player.gd" id="1_mkqcb"]
+[ext_resource type="Texture2D" uid="uid://d4kg1ey86ahfm" path="res://assets/player_idle/idle_down.png" id="1_xftnh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ixrk"]
+radius = 25.96151
+
+[node name="SlipSlashPlayer" type="CharacterBody2D" unique_id=748283017]
+motion_mode = 1
+script = ExtResource("1_mkqcb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=552738187]
+texture_filter = 1
+position = Vector2(389.375, 195.125)
+scale = Vector2(4.95, 4.4911766)
+texture = ExtResource("1_xftnh")
+region_enabled = true
+region_rect = Rect2(0, 0, 85, 85)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1124262961]
+z_index = -2
+position = Vector2(415, 255)
+shape = SubResource("CircleShape2D_1ixrk")
+debug_color = Color(0.30174237, 0.38281515, 0.91679984, 0.41960785)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=244818533]
