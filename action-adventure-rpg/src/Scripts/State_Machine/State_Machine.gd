@@ -44,6 +44,10 @@ func _input(event: InputEvent) -> void:
 # calls exit then makes the new state equal to the one in the paramenter then calls the enter function
 func change_state(next_state_name: String) -> void:
 	
+	
+	print("Trying to change to: ", next_state_name)
+	print("Available states: ", states.keys())
+	
 	if current_state:
 		current_state.exit_state()
 		

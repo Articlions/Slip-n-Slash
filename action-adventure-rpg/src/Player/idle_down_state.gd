@@ -4,11 +4,13 @@ class_name IdleDownState
 @onready var animated_sprite_2d: AnimatedSprite2D = $"../../AnimatedSprite2D"
 
 
-
+# THIS IS WHY STATE MACHINES WAS SON EXCTING FOR ME I CAN JUST DROP THIS IN HERE NO WORRIES ABOUT ORDERING!!!!
 func enter_state():
 	animated_sprite_2d.play("idle_down")
 	
+func _handle_input(event: InputEvent):
+	if Input.is_action_pressed("action_left") or Input.is_action_pressed("action_right"):
+		print("LEFT/RIGHT DETECTED")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+		state_machine.change_state("walkstate")
+		
