@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://c3f2fsfehtk8a" path="res://src/Player/walk_state.gd" id="4_r8d83"]
 [ext_resource type="Texture2D" uid="uid://ck2bstgbcp2x4" path="res://assets/player_run/run_left.png" id="6_pbtxm"]
 [ext_resource type="Texture2D" uid="uid://cqkdntgc5goqx" path="res://assets/player_run/run_right.png" id="7_8vm6t"]
-[ext_resource type="Texture2D" uid="uid://bgvu44igx385q" path="res://icon.svg" id="7_r8d83"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1ixrk"]
 radius = 25.96151
@@ -224,11 +223,3 @@ position = Vector2(418, 181)
 scale = Vector2(4.1875, 4.36875)
 sprite_frames = SubResource("SpriteFrames_1ixrk")
 animation = &"walk_left"
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=125539509]
-position = Vector2(676, 227)
-texture = ExtResource("7_r8d83")
-
-[node name="Icon2" type="Sprite2D" parent="." unique_id=2081863125]
-position = Vector2(115, 188)
-texture = ExtResource("7_r8d83")

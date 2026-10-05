@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://cbiefyjwd3nf0"]
 
-[ext_resource type="Theme" uid="uid://bpbg0t7wi7a40" path="res://src/Themes/main_menu_themes.tres" id="1_6ckfi"]
-[ext_resource type="Script" uid="uid://b0vupe52xj0u8" path="res://src/Scripts/Main_menu_scripts/UIManager.gd" id="2_3ryee"]
-[ext_resource type="Texture2D" uid="uid://w2irr788ool2" path="res://assets/rpg_backgrounds/Mountain-Dusk.png" id="2_hs6di"]
+[ext_resource type="Theme" uid="uid://bpbg0t7wi7a40" path="res://Resources/main_menu_themes.tres" id="1_47fu3"]
+[ext_resource type="Script" uid="uid://b0vupe52xj0u8" path="res://src/Main_menu/Main_menu_scripts/UIManager.gd" id="2_y5gk7"]
+[ext_resource type="Texture2D" uid="uid://w2irr788ool2" path="res://assets/rpg_backgrounds/Mountain-Dusk.png" id="3_kb264"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d0ebl"]
 
 [node name="Control" type="Control" unique_id=1564165186]
 layout_mode = 3
 anchors_preset = 0
-theme = ExtResource("1_6ckfi")
-script = ExtResource("2_3ryee")
+theme = ExtResource("1_47fu3")
+script = ExtResource("2_y5gk7")
 
 [node name="Panel" type="PanelContainer" parent="." unique_id=827720260]
 layout_mode = 0
@@ -69,4 +69,4 @@ offset_bottom = 662.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_hs6di")
+texture = ExtResource("3_kb264")
