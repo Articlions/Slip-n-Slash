@@ -2,9 +2,13 @@ extends State
 
 class_name WalkState
 
-const SPEED := 300.0
+@export var SPEED: float = 300.0
 
 @export var FRICTION: float = 200
+
+@export var ACCELERATION: float = 700
+
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $"../../AnimatedSprite2D"
 
 
@@ -40,12 +44,14 @@ func _physics_update(delta: float):
 	
 	
 	if direction_vector == Vector2.ZERO:
-		character.velocity = character.velocity.move_toward(character.velocity.x, 0, delta * FRICTION)
+		character.velocity = character.velocity.move_toward(Vector2.ZERO, delta * FRICTION)
 		state_machine.change_state("idledownstate")
 		return
 		
 		
 	character.velocity = direction_vector * SPEED
+
+
 	
 	character.move_and_slide()
 	

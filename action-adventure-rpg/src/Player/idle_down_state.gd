@@ -14,3 +14,6 @@ func _handle_input(event: InputEvent):
 
 		state_machine.change_state("walkstate")
 		
+	if Input.is_action_pressed("action_down") or Input.is_action_pressed("action_up"):
+		state_machine.change_state("walkstate")
+		

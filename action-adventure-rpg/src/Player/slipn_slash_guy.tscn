@@ -345,6 +345,7 @@ script = ExtResource("3_el8ih")
 
 [node name="WalkState" type="Node" parent="StateMachine" unique_id=915408362]
 script = ExtResource("4_r8d83")
+ACCELERATION = 1000.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1152683458]
 texture_filter = 1
