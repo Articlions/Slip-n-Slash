@@ -16,9 +16,9 @@ func _physics_update(delta: float):
 	
 	var character = state_machine.get_parent()
 	
-	var direction := Input.get_axis("action_left", "action_right")
+	# var direction := Input.get_axis("action_left", "action_right")
 	
-	var direction_vector:= Input.get_vector("action_left","action_right", "action_up","action_down")
+	var direction_vector: Vector2 = Input.get_vector("action_left","action_right", "action_up","action_down")
 	
 	
 	if direction_vector == Vector2.RIGHT:
@@ -26,17 +26,26 @@ func _physics_update(delta: float):
 		
 	elif direction_vector == Vector2.LEFT:
 		animated_sprite_2d.play("walk_left")
+		
+	elif direction_vector == Vector2.UP:
+		animated_sprite_2d.play("walk_up")
+		
+	elif direction_vector == Vector2.DOWN:
+		animated_sprite_2d.play("walk_down")
+		
+
+		
 
 	
 	
 	
-	if direction == 0:
-		move_toward(character.velocity.x, 0, delta * FRICTION)
+	if direction_vector == Vector2.ZERO:
+		character.velocity = character.velocity.move_toward(character.velocity.x, 0, delta * FRICTION)
 		state_machine.change_state("idledownstate")
 		return
 		
 		
-	character.velocity.x = direction * SPEED
+	character.velocity = direction_vector * SPEED
 	
 	character.move_and_slide()
 	
