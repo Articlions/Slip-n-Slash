@@ -1,12 +1,22 @@
 extends State
 
 class_name IdleDownState
+
+
+# ----------------Variables-------------------
 @onready var animated_sprite_2d: AnimatedSprite2D = $"../../AnimatedSprite2D"
+@onready var animation_tree: AnimationTree = $"../../AnimationTree"
+
 
 
 # THIS IS WHY STATE MACHINES WAS SON EXCTING FOR ME I CAN JUST DROP THIS IN HERE NO WORRIES ABOUT ORDERING!!!!
 func enter_state():
-	animated_sprite_2d.play("idle_down")
+	pass
+	
+
+	
+	
+	
 	
 func _handle_input(event: InputEvent):
 	if Input.is_action_pressed("action_left") or Input.is_action_pressed("action_right"):
