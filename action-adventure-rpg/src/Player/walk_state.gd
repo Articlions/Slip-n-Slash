@@ -11,6 +11,7 @@ class_name WalkState
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $"../../AnimatedSprite2D"
 
+@onready var animation_player: AnimationPlayer = $"../../AnimationPlayer"
 
 	
 	
@@ -26,17 +27,14 @@ func _physics_update(delta: float):
 	
 	
 	if direction_vector == Vector2.RIGHT:
-		animated_sprite_2d.play("walk_right")
-		
+		animation_player.play("run_right")
 	elif direction_vector == Vector2.LEFT:
-		animated_sprite_2d.play("walk_left")
-		
+		animation_player.play("run_left")
 	elif direction_vector == Vector2.UP:
-		animated_sprite_2d.play("walk_up")
-		
+		animation_player.play("run_up")
+	
 	elif direction_vector == Vector2.DOWN:
-		animated_sprite_2d.play("walk_down")
-		
+		animation_player.play("run_down")
 
 		
 
