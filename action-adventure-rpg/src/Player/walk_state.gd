@@ -49,17 +49,17 @@ func _physics_update(delta: float):
 	
 	
 	if direction_vector == Vector2.ZERO:
-		character.velocity = character.velocity.move_toward(Vector2.ZERO, delta * FRICTION)
+		ssplayer.velocity = ssplayer.velocity.move_toward(Vector2.ZERO, delta * FRICTION)
 		animation_tree.set("parameters/StateMachine/WalkState/IdleState/blend_position", negative_vector)
-		state_machine.change_state("idledownstate")
+		state_machine.change_state("idlestate")
 		return
 		
 		
-	character.velocity = direction_vector * SPEED
+	ssplayer.velocity = direction_vector * SPEED
 
 
 	
-	character.move_and_slide()
+	ssplayer.move_and_slide()
 	
 	
 	

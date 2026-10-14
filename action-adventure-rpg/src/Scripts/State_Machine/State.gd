@@ -6,7 +6,7 @@ class_name State # Look I know im taking from a tutorial but For real its import
 # Apprarently the physics_process() is a virtual method wow! cool welp im making my own
 
 var state_machine: StateMachine
-var ssplayer := get_parent()
+@export var ssplayer: CharacterBody2D
 
 
 # SHOOOOOOOOT apperently this should hold a reference to its parent thats crazy 

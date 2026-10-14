@@ -1,6 +1,6 @@
 extends State
 
-class_name IdleDownState
+class_name IdleState
 
 
 # ----------------Variables-------------------
