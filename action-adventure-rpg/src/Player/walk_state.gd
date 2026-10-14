@@ -9,6 +9,7 @@ class_name WalkState
 
 
 # -----------Variables Not onready--------
+@export_category("Player-Stats")
 @export var SPEED: float = 300.0
 @export var FRICTION: float = 200
 @export var ACCELERATION: float = 700
@@ -17,8 +18,8 @@ var negative_vector
 
 
 	
-	
-		
+func enter_state():
+	animation_tree.set_active(true)
 
 func _physics_update(delta: float):
 	
