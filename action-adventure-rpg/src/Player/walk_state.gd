@@ -29,20 +29,21 @@ func _physics_update(delta: float):
 	
 	direction_vector = Input.get_vector("action_left","action_right", "action_up","action_down")
 	
+	
+	
+	if Input.is_action_just_pressed("action_attack_1"):
+		state_machine.change_state("attack1state")
+		# animation_tree.set("parameters/StateMachine/WalkState/AttackState/BlendSpace2D/blend_position", direction_vector)
+		return
+		
+		# yeah i see what i did FACE SLAP!
+	
 	if direction_vector != Vector2.ZERO:
 		negative_vector = Vector2(direction_vector.x, -direction_vector.y)
 		animation_tree.set("parameters/StateMachine/WalkState/RunState/blend_position", negative_vector)
 
 	
-	
-	# if direction_vector == Vector2.RIGHT:
-		animation_player.play("run_right")
-	# elif direction_vector == Vector2.LEFT:
-		animation_player.play("run_left")
-	# elif direction_vector == Vector2.UP:
-		animation_player.play("run_up")
-	# elif direction_vector == Vector2.DOWN:
-		animation_player.play("run_down") 
+
 
 		
 
@@ -52,9 +53,13 @@ func _physics_update(delta: float):
 	if direction_vector == Vector2.ZERO:
 		ssplayer.velocity = ssplayer.velocity.move_toward(Vector2.ZERO, delta * FRICTION)
 		animation_tree.set("parameters/StateMachine/WalkState/IdleState/blend_position", negative_vector)
+		# quick fix to make it eaiser invert it via code!
 		state_machine.change_state("idlestate")
 		return
 		
+		
+		
+
 		
 	ssplayer.velocity = direction_vector * SPEED
 

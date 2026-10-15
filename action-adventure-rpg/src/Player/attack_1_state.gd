@@ -1,9 +1,14 @@
 extends State
 class_name Attack1State
 
+@onready var animation_tree: AnimationTree = $"../../AnimationTree"
+
+
+
 func enter_state():
-	pass
-	
+	var animation_playback = animation_tree.get("parameters/StateMachine/WalkState/playback")
+	animation_playback.travel("AttackState")
+
 func exit_state():
 	pass
 	
