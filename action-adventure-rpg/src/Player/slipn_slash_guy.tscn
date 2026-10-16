@@ -1244,12 +1244,19 @@ advance_mode = 2
 advance_expression = "direction_vector.length() == 0.0"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3gieo"]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gkxt5"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n6o4x"]
 switch_mode = 2
 advance_mode = 2
+advance_expression = "direction_vector.length == 0.0"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hpa8k"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "direction_vector.length > 0.0"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_fil3d"]
 states/AttackState/node = SubResource("AnimationNodeBlendTree_gkxt5")
@@ -1259,7 +1266,7 @@ states/IdleState/position = Vector2(386, 77)
 states/RunState/node = SubResource("AnimationNodeBlendSpace2D_128y6")
 states/RunState/position = Vector2(386, 232)
 states/Start/position = Vector2(199, 100)
-transitions = ["Start", "IdleState", SubResource("AnimationNodeStateMachineTransition_fh02e"), "IdleState", "RunState", SubResource("AnimationNodeStateMachineTransition_ep61y"), "RunState", "IdleState", SubResource("AnimationNodeStateMachineTransition_npvx7"), "IdleState", "AttackState", SubResource("AnimationNodeStateMachineTransition_3gieo"), "RunState", "AttackState", SubResource("AnimationNodeStateMachineTransition_gkxt5"), "AttackState", "IdleState", SubResource("AnimationNodeStateMachineTransition_n6o4x")]
+transitions = ["Start", "IdleState", SubResource("AnimationNodeStateMachineTransition_fh02e"), "IdleState", "RunState", SubResource("AnimationNodeStateMachineTransition_ep61y"), "RunState", "IdleState", SubResource("AnimationNodeStateMachineTransition_npvx7"), "IdleState", "AttackState", SubResource("AnimationNodeStateMachineTransition_3gieo"), "RunState", "AttackState", SubResource("AnimationNodeStateMachineTransition_gkxt5"), "AttackState", "IdleState", SubResource("AnimationNodeStateMachineTransition_n6o4x"), "AttackState", "RunState", SubResource("AnimationNodeStateMachineTransition_hpa8k")]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ncr4a"]
 advance_mode = 2
@@ -1270,7 +1277,7 @@ states/WalkState/position = Vector2(458, 100)
 transitions = ["Start", "WalkState", SubResource("AnimationNodeStateMachineTransition_ncr4a")]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_1ixrk"]
-graph_offset = Vector2(0, 198.38438)
+graph_offset = Vector2(-642, 212.73462)
 nodes/output/position = Vector2(600, 240)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_4txe3")
 nodes/StateMachine/position = Vector2(60, 120)

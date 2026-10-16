@@ -33,7 +33,7 @@ func _physics_update(delta: float):
 	
 	if Input.is_action_just_pressed("action_attack_1"):
 		state_machine.change_state("attack1state")
-		# animation_tree.set("parameters/StateMachine/WalkState/AttackState/BlendSpace2D/blend_position", direction_vector)
+		animation_tree.set("parameters/StateMachine/WalkState/AttackState/BlendSpace2D/blend_position", direction_vector)
 		return
 		
 		# yeah i see what i did FACE SLAP!
