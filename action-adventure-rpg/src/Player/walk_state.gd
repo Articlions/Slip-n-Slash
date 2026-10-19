@@ -19,7 +19,8 @@ var negative_vector
 
 	
 func enter_state():
-	animation_tree.set_active(true)
+	pass
+	# animation_tree.set_active(true)
 
 func _physics_update(delta: float):
 	

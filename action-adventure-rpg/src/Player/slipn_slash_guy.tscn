@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://3pavw1q1nt7"]
 
+[ext_resource type="Script" uid="uid://iuv6dbas6n45" path="res://src/Player/Simpler_State_Machine/slipn_slash_guy.gd" id="1_btdqk"]
 [ext_resource type="Texture2D" uid="uid://d4kg1ey86ahfm" path="res://assets/player_idle/idle_down.png" id="1_xftnh"]
 [ext_resource type="Texture2D" uid="uid://b2jp0low6o5b8" path="res://assets/player_idle/idle_left.png" id="2_qpmie"]
 [ext_resource type="Script" uid="uid://cyfk12arery3w" path="res://src/Scripts/State_Machine/State_Machine.gd" id="3_bvhq3"]
@@ -1277,7 +1278,6 @@ states/WalkState/position = Vector2(458, 100)
 transitions = ["Start", "WalkState", SubResource("AnimationNodeStateMachineTransition_ncr4a")]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_1ixrk"]
-graph_offset = Vector2(-642, 212.73462)
 nodes/output/position = Vector2(600, 240)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_4txe3")
 nodes/StateMachine/position = Vector2(60, 120)
@@ -1285,6 +1285,7 @@ node_connections = [&"output", 0, &"StateMachine"]
 
 [node name="SlipSlashPlayer" type="CharacterBody2D" unique_id=748283017]
 motion_mode = 1
+script = ExtResource("1_btdqk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1124262961]
 z_index = -2
@@ -1296,6 +1297,8 @@ debug_color = Color(0.30174237, 0.38281515, 0.91679984, 0.41960785)
 libraries/ = SubResource("AnimationLibrary_oufn3")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1373076197 node_paths=PackedStringArray("starting_state")]
+process_mode = 4
+physics_interpolation_mode = 1
 script = ExtResource("3_bvhq3")
 starting_state = NodePath("IdleState")
 
