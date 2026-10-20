@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://dpas0o282eh0u"]
-
-[ext_resource type="PackedScene" uid="uid://3pavw1q1nt7" path="res://src/Player/slipn_slash_guy.tscn" id="1_fyhi1"]
-
-[node name="Game" type="Node" unique_id=487217411]
-
-[node name="SlipSlashPlayer" parent="." unique_id=748283017 instance=ExtResource("1_fyhi1")]
-position = Vector2(218, 182)

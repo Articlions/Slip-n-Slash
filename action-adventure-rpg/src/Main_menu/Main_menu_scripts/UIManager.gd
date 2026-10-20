@@ -17,7 +17,7 @@ func _ready() -> void:
 # func _process(delta: float) -> void:
 	pass
 func _on_singleplayer_button_pressed():
-	get_tree().change_scene_to_file("res://src/Game/level1.tscn")
+	get_tree().change_scene_to_file("res://src/Game/level1/level1.tscn")
 	
 func _on_quit_button_pressed():
 	get_tree().quit()

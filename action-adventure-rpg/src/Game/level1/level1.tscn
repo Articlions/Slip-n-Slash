@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dpas0o282eh0u"]
+
+[ext_resource type="PackedScene" uid="uid://cjdbgfossmpyu" path="res://src/Game/level1/world1.tscn" id="1_xln2c"]
+[ext_resource type="PackedScene" uid="uid://3pavw1q1nt7" path="res://src/Player/slipn_slash_guy.tscn" id="2_n0say"]
+
+[node name="Game" type="Node" unique_id=487217411]
+
+[node name="World1" parent="." unique_id=646008491 instance=ExtResource("1_xln2c")]
+position = Vector2(210, 69)
+
+[node name="SlipSlashPlayer" parent="." unique_id=748283017 instance=ExtResource("2_n0say")]
+position = Vector2(218, 182)

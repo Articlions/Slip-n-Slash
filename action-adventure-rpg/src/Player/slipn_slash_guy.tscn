@@ -1332,3 +1332,5 @@ parameters/StateMachine/WalkState/AttackState/BlendSpace2D/blend_position = Vect
 parameters/StateMachine/WalkState/AttackState/TimeScale/scale = 1.0
 parameters/StateMachine/WalkState/IdleState/blend_position = Vector2(-0.08766234, -0.0333333)
 parameters/StateMachine/WalkState/RunState/blend_position = Vector2(1, 0.026666641)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=926537053]
