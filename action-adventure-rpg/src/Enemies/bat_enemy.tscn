@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://nr7xaeytcyhh"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0rgph"]
+load_path = "res://.godot/imported/BatStandard_Flying.png-45947b2857f5a44f77fd07933db3fce7.ctex"
+
+[sub_resource type="Animation" id="Animation_0rgph"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Flying:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_xtxtj"]
+resource_name = "flying"
+length = 0.7
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Flying:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 3, 3, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2mc1c"]
+_data = {
+&"RESET": SubResource("Animation_0rgph"),
+&"flying": SubResource("Animation_xtxtj")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ixrk"]
+radius = 28.0
+height = 88.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ixrk"]
+radius = 25.079872
+
+[node name="BatEnemy" type="CharacterBody2D" unique_id=551867235]
+
+[node name="Flying" type="Sprite2D" parent="." unique_id=104464944]
+z_index = 1
+texture_filter = 1
+position = Vector2(5.000002, -2.0000038)
+scale = Vector2(5.5071425, 6.265625)
+texture = SubResource("CompressedTexture2D_0rgph")
+hframes = 4
+region_rect = Rect2(0, 0, 35, 32)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=94117616]
+libraries/ = SubResource("AnimationLibrary_2mc1c")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=58383823]
+collision_layer = 16
+collision_mask = 0
+input_pickable = false
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=997597183]
+position = Vector2(6, -17)
+shape = SubResource("CapsuleShape2D_1ixrk")
+debug_color = Color(0.57892436, 0.089054026, 4.813075e-08, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1337027365]
+position = Vector2(5, 17)
+shape = SubResource("CircleShape2D_1ixrk")

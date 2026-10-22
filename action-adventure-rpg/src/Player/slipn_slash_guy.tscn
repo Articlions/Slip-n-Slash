@@ -1282,6 +1282,9 @@ nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_4txe3")
 nodes/StateMachine/position = Vector2(60, 120)
 node_connections = [&"output", 0, &"StateMachine"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ixrk"]
+size = Vector2(20, 114)
+
 [node name="SlipSlashPlayer" type="CharacterBody2D" unique_id=748283017]
 motion_mode = 1
 script = ExtResource("1_btdqk")
@@ -1334,3 +1337,15 @@ parameters/StateMachine/WalkState/IdleState/blend_position = Vector2(-0.08766234
 parameters/StateMachine/WalkState/RunState/blend_position = Vector2(1, 0.026666641)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=926537053]
+
+[node name="HitBox" type="Area2D" parent="." unique_id=1847038504]
+collision_layer = 0
+collision_mask = 0
+input_pickable = false
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1421085396]
+position = Vector2(416, 200)
+shape = SubResource("RectangleShape2D_1ixrk")
+debug_color = Color(0.058335535, 0.20567754, 0.053297237, 0.41960785)
