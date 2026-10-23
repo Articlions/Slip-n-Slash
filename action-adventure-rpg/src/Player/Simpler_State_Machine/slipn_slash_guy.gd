@@ -28,7 +28,8 @@ var animation_playback: AnimationNodeStateMachinePlayback
 @export var FRICTION: float = 200
 @export var ACCELERATION: float = 700
 @export var current_state: States = States.IDLE
-
+@export var attack_speed: float = 0.5
+@export var attack_damage: int = 50
 
 
 # -------------Varibles not Exported hahahaha------------
@@ -132,3 +133,7 @@ func attack_process():
 	
 	
 	
+
+
+func _on_hit_box_area_entered(area: Area2D) -> void:
+	area.owner.take_damage(attack_damage)

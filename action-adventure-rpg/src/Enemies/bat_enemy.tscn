@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://nr7xaeytcyhh"]
 
+[ext_resource type="Script" uid="uid://cigevn7ofky88" path="res://src/Enemies/bat_enemy.gd" id="1_xtxtj"]
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0rgph"]
 load_path = "res://.godot/imported/BatStandard_Flying.png-45947b2857f5a44f77fd07933db3fce7.ctex"
 
@@ -50,6 +52,7 @@ height = 88.0
 radius = 25.079872
 
 [node name="BatEnemy" type="CharacterBody2D" unique_id=551867235]
+script = ExtResource("1_xtxtj")
 
 [node name="Flying" type="Sprite2D" parent="." unique_id=104464944]
 z_index = 1

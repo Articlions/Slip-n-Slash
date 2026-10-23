@@ -48,6 +48,54 @@ tracks/1/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitBox:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(307, 256)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HitBox:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitBox:monitoring")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitBox/CollisionShape2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(103.322784, 11.105988)]
+}
 
 [sub_resource type="Animation" id="Animation_hpa8k"]
 resource_name = "attack1_down"
@@ -76,6 +124,54 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitBox:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HitBox:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(382.00003, 230), Vector2(307, 256), Vector2(404, 244), Vector2(430.99997, 202.99998)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitBox:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.020628069, 0.0, 0.03609415, -0.31809464]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitBox/CollisionShape2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(135.60654, -26.848557), Vector2(79.37052, -18.87648), Vector2(55.56555, -24.869057)]
 }
 
 [sub_resource type="Animation" id="Animation_btdqk"]
@@ -1276,14 +1372,13 @@ states/WalkState/position = Vector2(458, 100)
 transitions = ["Start", "WalkState", SubResource("AnimationNodeStateMachineTransition_ncr4a")]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_1ixrk"]
-graph_offset = Vector2(0, 126.206696)
 nodes/output/position = Vector2(600, 240)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_4txe3")
 nodes/StateMachine/position = Vector2(60, 120)
 node_connections = [&"output", 0, &"StateMachine"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ixrk"]
-size = Vector2(20, 114)
+size = Vector2(188.02576, 58.974045)
 
 [node name="SlipSlashPlayer" type="CharacterBody2D" unique_id=748283017]
 motion_mode = 1
@@ -1339,6 +1434,8 @@ parameters/StateMachine/WalkState/RunState/blend_position = Vector2(1, 0.0266666
 [node name="Camera2D" type="Camera2D" parent="." unique_id=926537053]
 
 [node name="HitBox" type="Area2D" parent="." unique_id=1847038504]
+z_index = 1
+position = Vector2(307, 256)
 collision_layer = 0
 collision_mask = 0
 input_pickable = false
@@ -1346,6 +1443,10 @@ monitoring = false
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1421085396]
-position = Vector2(416, 200)
+position = Vector2(103.322784, 11.105988)
+rotation = -0.8262069
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_1ixrk")
 debug_color = Color(0.058335535, 0.20567754, 0.053297237, 0.41960785)
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
