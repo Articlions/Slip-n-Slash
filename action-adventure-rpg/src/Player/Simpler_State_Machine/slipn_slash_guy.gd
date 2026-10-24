@@ -136,4 +136,7 @@ func attack_process():
 
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
+	print("HITBOX DETECTED: ", area.name)
+	print("AREA OWNER: ", area.owner)
+
 	area.owner.take_damage(attack_damage)

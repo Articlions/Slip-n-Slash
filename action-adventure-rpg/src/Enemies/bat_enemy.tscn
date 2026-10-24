@@ -52,6 +52,7 @@ height = 88.0
 radius = 25.079872
 
 [node name="BatEnemy" type="CharacterBody2D" unique_id=551867235]
+motion_mode = 1
 script = ExtResource("1_xtxtj")
 
 [node name="Flying" type="Sprite2D" parent="." unique_id=104464944]

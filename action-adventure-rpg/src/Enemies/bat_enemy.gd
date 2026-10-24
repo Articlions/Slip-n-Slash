@@ -6,6 +6,7 @@ extends CharacterBody2D
 
 func take_damage(damage_amount: int) -> void: 
 	health_points -= damage_amount
+	print("Damage Taken Health: ",  health_points)
 	if health_points <= 0:
 		death()
 		
