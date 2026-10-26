@@ -3,6 +3,10 @@ extends Control
 @onready var singleplayer_button: Button = $Panel/VBoxContainer/Singleplayer_Button
 
 @onready var quit_button: Button = $Panel/VBoxContainer/Quit_Button
+@onready var multiplayer_button: Button = $Panel/VBoxContainer/Multiplayer_Button
+
+
+
 
 
 
@@ -12,10 +16,10 @@ func _ready() -> void:
 	singleplayer_button.pressed.connect(_on_singleplayer_button_pressed) # first time i connected through Code!
 	quit_button.pressed.connect(_on_quit_button_pressed) # and then we do it again yeah!
 	
-
-# Called every frame. 'delta' is the elapsed time since the previ--- Forget this for right now
-# func _process(delta: float) -> void:
-	pass
+	if OS.has_feature("linux"):
+		multiplayer_button.disabled = true
+		multiplayer_button.hide()
+	
 func _on_singleplayer_button_pressed():
 	get_tree().change_scene_to_file("res://src/Game/level1/level1.tscn")
 	
