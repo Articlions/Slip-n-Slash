@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cjdbgfossmpyu" path="res://src/Game/level1/world1.tscn" id="1_xln2c"]
 [ext_resource type="PackedScene" uid="uid://3pavw1q1nt7" path="res://src/Player/slipn_slash_guy.tscn" id="2_n0say"]
 [ext_resource type="PackedScene" uid="uid://nr7xaeytcyhh" path="res://src/Enemies/bat_enemy.tscn" id="3_n0say"]
+[ext_resource type="PackedScene" uid="uid://03w4hfogw4li" path="res://src/Game/HUD/touch_controls.tscn" id="4_rp33q"]
 
 [node name="Game" type="Node" unique_id=487217411]
 
@@ -16,3 +17,5 @@ position = Vector2(218, 182)
 
 [node name="BatEnemy" parent="Node2D" unique_id=551867235 instance=ExtResource("3_n0say")]
 position = Vector2(883, 247)
+
+[node name="CanvasLayer" parent="." unique_id=1795987959 instance=ExtResource("4_rp33q")]
