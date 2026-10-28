@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://03w4hfogw4li"]
 
-[ext_resource type="Script" uid="uid://4mdd6h72a7mb" path="res://src/Game/HUD/touch_controls.gd" id="1_hv1p6"]
+[ext_resource type="Script" uid="uid://4mdd6h72a7mb" path="res://src/Game/GameUI/touch_controls.gd" id="1_hv1p6"]
 [ext_resource type="Theme" uid="uid://bpbg0t7wi7a40" path="res://Resources/main_menu_themes.tres" id="2_ngodh"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_aifrg"]
@@ -42,3 +42,19 @@ scale = Vector2(155.00003, 165.00002)
 texture_normal = SubResource("PlaceholderTexture2D_aifrg")
 texture_pressed = SubResource("PlaceholderTexture2D_goyli")
 action = "action_attack_1"
+
+[node name="Button" type="Button" parent="Control" unique_id=1718995619]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -139.0
+offset_top = -166.0
+offset_right = 131.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 36
+text = "Pause"

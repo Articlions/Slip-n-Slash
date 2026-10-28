@@ -3,7 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://cjdbgfossmpyu" path="res://src/Game/level1/world1.tscn" id="1_xln2c"]
 [ext_resource type="PackedScene" uid="uid://3pavw1q1nt7" path="res://src/Player/slipn_slash_guy.tscn" id="2_n0say"]
 [ext_resource type="PackedScene" uid="uid://nr7xaeytcyhh" path="res://src/Enemies/bat_enemy.tscn" id="3_n0say"]
-[ext_resource type="PackedScene" uid="uid://03w4hfogw4li" path="res://src/Game/HUD/touch_controls.tscn" id="4_rp33q"]
+[ext_resource type="PackedScene" uid="uid://03w4hfogw4li" path="res://src/Game/GameUI/touch_controls.tscn" id="4_rp33q"]
+[ext_resource type="PackedScene" uid="uid://cym4ibjt2iced" path="res://src/Game/GameUI/pause_menu.tscn" id="5_5oc2e"]
 
 [node name="Game" type="Node" unique_id=487217411]
 
@@ -19,3 +20,6 @@ position = Vector2(218, 182)
 position = Vector2(883, 247)
 
 [node name="CanvasLayer" parent="." unique_id=1795987959 instance=ExtResource("4_rp33q")]
+
+[node name="PauseMenu" parent="." unique_id=2045192081 instance=ExtResource("5_5oc2e")]
+visible = false

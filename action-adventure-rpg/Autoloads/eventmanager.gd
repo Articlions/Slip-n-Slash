@@ -11,3 +11,6 @@ signal sword_slashed(damage_dealt: int)
 # ohh riight we need to also tell when you die 
 
 signal player_died()
+
+
+signal pause_pressed()
