@@ -4,6 +4,10 @@ class_name PauseMenu extends CanvasLayer
 
 
 
+func _ready() -> void:
+	Eventmanager.pause_pressed.connect(_on_pause_pressed)
+
+
 func pause_episode():
 	get_tree().paused = true
 	pause_menu.show()
@@ -28,6 +32,9 @@ func pause_pressed():
 func _on_resume_button_pressed() -> void:
 	resume_episode()
 	
+	
+func _on_pause_pressed() -> void:
+	pause_episode()
 	
 	
 

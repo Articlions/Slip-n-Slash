@@ -7,3 +7,7 @@ func _ready() -> void:
 		self.PROCESS_MODE_DISABLED
 		self.hide()
 		
+
+
+func _on_button_pressed() -> void:
+	Eventmanager.pause_pressed.emit()
