@@ -1488,7 +1488,11 @@ node_connections = [&"output", 0, &"StateMachine"]
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ixrk"]
 size = Vector2(197.03677, 120.585266)
 
-[node name="SlipSlashPlayer" type="CharacterBody2D" unique_id=748283017]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_btdqk"]
+radius = 38.0
+height = 154.0
+
+[node name="SlipSlashPlayer" type="CharacterBody2D" unique_id=748283017 groups=["Players"]]
 motion_mode = 1
 script = ExtResource("1_btdqk")
 
@@ -1556,5 +1560,17 @@ rotation = -0.8262069
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_1ixrk")
 debug_color = Color(0.058335535, 0.20567754, 0.053297237, 0.41960785)
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=1674177128]
+position = Vector2(-22, 0)
+collision_layer = 32
+collision_mask = 0
+input_pickable = false
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1189090840]
+position = Vector2(441, 204)
+shape = SubResource("CapsuleShape2D_btdqk")
+debug_color = Color(0.57892436, 0.089054026, 4.813075e-08, 0.41960785)
 
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

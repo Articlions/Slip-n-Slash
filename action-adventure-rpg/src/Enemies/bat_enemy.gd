@@ -1,11 +1,72 @@
 extends CharacterBody2D
 
+enum States {
+	IDLE,
+	WALK,
+	ATTACK,
+	RETURN,
+	DEAD
+	
+}
+
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @export_category("bat-stats")
 @export var health_points: int = 150
+@export var current_state: States = States.IDLE
+@export var speed: int = 300
+@export var attack_damage: int = 15
+@export var aggro_range: float = 256.0
+@export var attack_range: float = 80.0
+@export var attack_speed: float = 1.0
+
+@onready var spawn_point: Vector2 = global_position
+@onready var player: CharacterBody2D = get_tree().get_first_node_in_group("Players")
+
 
 func _ready() -> void:
 	animation_player.play("idle")
+	
+	
+func _physics_process(delta: float) -> void:
+	if current_state == States.DEAD:
+		return
+	if current_state == States.ATTACK:
+		return
+	if distance_to_player() <= attack_range:
+		current_state = States.ATTACK
+		enemy_attack()
+		
+	elif distance_to_player() <= aggro_range:
+		current_state = States.WALK
+		enemy_walk()
+	elif global_position.distance_to(spawn_point) > 32:
+		current_state = States.RETURN
+		enemy_walk() 
+		
+	elif current_state != States.IDLE:
+		current_state = States.IDLE
+		update_enemy_animations()
+	
+	
+ # I DID NOT realize that the enemy was just another player
+func distance_to_player() -> float:
+	return global_position.distance_to(player.global_position)
+	
+	
+func enemy_walk():
+	pass
+	
+func enemy_attack():
+	update_enemy_animations()
+	await get_tree().create_timer(attack_speed).timeout
+	current_state = States.IDLE
+	
+	
+func update_enemy_animations():
+	pass
+	
+	
+	
 
 func take_damage(damage_amount: int) -> void: 
 	health_points -= damage_amount

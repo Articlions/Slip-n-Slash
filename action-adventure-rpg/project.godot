@@ -41,6 +41,10 @@ folder_colors={
 "res://src/": "orange"
 }
 
+[global_group]
+
+Players=""
+
 [input]
 
 action_left={
