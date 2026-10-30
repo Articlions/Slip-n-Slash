@@ -402,6 +402,14 @@ frame = 1
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=94117616]
 libraries/ = SubResource("AnimationLibrary_2mc1c")
 
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=847808780]
+path_postprocessing = 1
+avoidance_enabled = true
+neighbor_distance = 128.0
+max_speed = 128.0
+debug_enabled = true
+debug_path_custom_color = Color(0.41649255, 0.12747324, 0.029614009, 1)
+
 [node name="HurtBox" type="Area2D" parent="." unique_id=58383823]
 position = Vector2(-22, 0)
 collision_layer = 16
@@ -435,3 +443,5 @@ shape = SubResource("RectangleShape2D_j82mm")
 debug_color = Color(0.058335535, 0.20567754, 0.053297237, 0.41960785)
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

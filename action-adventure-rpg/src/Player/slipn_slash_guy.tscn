@@ -369,6 +369,9 @@ tracks/4/keys = {
 "values": [0.0, 0.0, -2.0112457, -2.0112457]
 }
 
+[sub_resource type="Animation" id="Animation_npvx7"]
+resource_name = "death"
+
 [sub_resource type="Animation" id="Animation_1bs54"]
 resource_name = "idle_down"
 loop_mode = 1
@@ -604,6 +607,7 @@ _data = {
 &"attack1_left": SubResource("Animation_btdqk"),
 &"attack1_right": SubResource("Animation_6n8y0"),
 &"attack1_up": SubResource("Animation_ep61y"),
+&"death": SubResource("Animation_npvx7"),
 &"idle_down": SubResource("Animation_1bs54"),
 &"idle_left": SubResource("Animation_hmiit"),
 &"idle_right": SubResource("Animation_5h668"),
@@ -1572,5 +1576,8 @@ monitoring = false
 position = Vector2(441, 204)
 shape = SubResource("CapsuleShape2D_btdqk")
 debug_color = Color(0.57892436, 0.089054026, 4.813075e-08, 0.41960785)
+
+[node name="Detection2D" type="Marker2D" parent="." unique_id=44650013]
+position = Vector2(416, 184)
 
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

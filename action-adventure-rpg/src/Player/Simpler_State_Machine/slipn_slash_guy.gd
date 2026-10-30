@@ -8,7 +8,8 @@ class_name SSPlayer extends CharacterBody2D
 enum States {
 	IDLE,
 	WALK,
-	ATTACK
+	ATTACK,
+	DEATH
 	
 }
 
@@ -30,6 +31,7 @@ var animation_playback: AnimationNodeStateMachinePlayback
 @export var current_state: States = States.IDLE
 @export var attack_speed: float = 0.5
 @export var attack_damage: int = 50
+@export var health_points: int = 250
 
 
 # -------------Varibles not Exported hahahaha------------
@@ -68,12 +70,20 @@ func change_state(new_state: States):
 	
 	elif current_state == States.IDLE:
 		animation_playback.travel("IdleState")
+		
+		
+		
+func take_damage(damage_amount: int) -> void: 
+	health_points -= damage_amount
+	print("Damage Taken Health: ",  health_points)
+	if health_points <= 0:
+		death_process()
 
 		
 
 
 func _physics_process(delta: float) -> void:
-	# needed for rpgsvs get_axis fun fact!
+	# needed for rpgs get_axis fun fact!
 	direction_vector = Input.get_vector("action_left","action_right", "action_up","action_down")
 	
 	if Input.is_action_just_pressed("action_attack_1") and current_state != States.ATTACK:
@@ -95,6 +105,7 @@ func _physics_process(delta: float) -> void:
 			walk_process()
 		States.ATTACK: 
 			attack_process()
+
 			
 	move_and_slide()
 	
@@ -122,14 +133,13 @@ func walk_process():
 	else: 
 		change_state(States.IDLE)
 	
-	
-
-	
-	
 
 func attack_process():
 	velocity = Vector2.ZERO
 	
+	
+func death_process():
+	get_tree().change_scene_to_file("res://src/Main_menu/Main_menu.tscn")
 	
 	
 	
