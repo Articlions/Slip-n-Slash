@@ -34,6 +34,7 @@ func _physics_process(delta: float) -> void:
 		return
 	if distance_to_player() <= attack_range:
 		current_state = States.ATTACK
+		print("Im gonna get you")
 		enemy_attack()
 		
 	elif distance_to_player() <= aggro_range:
@@ -63,7 +64,15 @@ func enemy_attack():
 	
 	
 func update_enemy_animations():
-	pass
+	match current_state:
+		States.IDLE:
+			animation_player.play("idle")
+		States.WALK:
+			animation_player.play("flying")
+		States.RETURN:
+			animation_player.play("flying")
+		States.ATTACK:
+			animation_player.play("attack")
 	
 	
 	
