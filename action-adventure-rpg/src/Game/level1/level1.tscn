@@ -16,20 +16,8 @@ position = Vector2(218, 182)
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1386458776]
 
-[node name="BatEnemy" parent="Node2D" unique_id=551867235 instance=ExtResource("3_n0say")]
-position = Vector2(883, 247)
-
-[node name="BatEnemy2" parent="Node2D" unique_id=1958011477 instance=ExtResource("3_n0say")]
-position = Vector2(439, 195)
-
-[node name="BatEnemy3" parent="Node2D" unique_id=1272255474 instance=ExtResource("3_n0say")]
-position = Vector2(881, 854)
-
-[node name="BatEnemy4" parent="Node2D" unique_id=1353496625 instance=ExtResource("3_n0say")]
-position = Vector2(477, 1001)
-
-[node name="BatEnemy5" parent="Node2D" unique_id=371924156 instance=ExtResource("3_n0say")]
-position = Vector2(1446, 863)
+[node name="BatEnemy2" parent="Node2D" unique_id=551867235 instance=ExtResource("3_n0say")]
+position = Vector2(320, 264)
 
 [node name="CanvasLayer" parent="." unique_id=1795987959 instance=ExtResource("4_rp33q")]
 

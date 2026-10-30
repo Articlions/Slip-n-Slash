@@ -15,8 +15,8 @@ enum States {
 @export var current_state: States = States.IDLE
 @export var speed: int = 300
 @export var attack_damage: int = 15
-@export var aggro_range: float = 256.0
-@export var attack_range: float = 80.0
+@export var aggro_range: float = 400.0
+@export var attack_range: float = 200.0
 @export var attack_speed: float = 1.0
 
 @onready var spawn_point: Vector2 = global_position
@@ -28,11 +28,17 @@ func _ready() -> void:
 	
 	
 func _physics_process(delta: float) -> void:
+
 	if current_state == States.DEAD:
 		return
-	if current_state == States.ATTACK:
-		return
-	if distance_to_player() <= attack_range:
+	# if current_state == States.ATTACK:
+		# return
+	var distance = distance_to_player()
+	print("Distance: ", distance)
+	print("Attack Range: ", attack_range)
+	print("Distance: ", distance, " | State: ", current_state)
+
+	if distance <= attack_range:
 		current_state = States.ATTACK
 		print("Im gonna get you")
 		enemy_attack()
