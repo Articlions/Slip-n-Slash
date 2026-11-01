@@ -17,7 +17,7 @@ enum States {
 @export var attack_damage: int = 15
 @export var aggro_range: float = 256.0
 @export var attack_range: float = 80.0
-@export var attack_speed: float = 1.0
+@export var attack_speed: float = 0.5
 
 # --------------Onreadies!-------------
 @onready var spawn_point: Vector2 = global_position
@@ -69,13 +69,29 @@ func distance_to_player() -> float:
 	
 	
 func enemy_walk():
-	pass
+	if current_state == States.WALK:
+		navigation_agent_2d.target_position = player_detection_2D.global_position
+	elif current_state == States.RETURN:
+		navigation_agent_2d.target_position = spawn_point
+	var next_path_position: Vector2 = navigation_agent_2d.get_next_path_position()
+	velocity = global_position.direction_to(next_path_position) * speed
+	
+	if navigation_agent_2d.avoidance_enabled:
+		navigation_agent_2d.set_velocity(velocity)
+	else:
+		_on_navigation_agent_2d_velocity_computed(velocity)
+	move_and_slide()
+	
+	update_enemy_animations()
 	
 	
 	
 	
 func _on_navigation_agent_2d_velocity_computed(safe_velocity: Vector2) -> void:
 	navigation_agent_2d.velocity = safe_velocity
+	
+	
+	
 func enemy_attack():
 	update_enemy_animations()
 	await get_tree().create_timer(attack_speed).timeout

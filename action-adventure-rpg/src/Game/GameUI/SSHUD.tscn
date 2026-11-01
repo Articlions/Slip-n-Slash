@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cb0hewhi85qh3"]
+
+[ext_resource type="Script" uid="uid://c2v10qcg2hcag" path="res://src/Game/GameUI/sshud.gd" id="1_6xdta"]
+[ext_resource type="Theme" uid="uid://bpbg0t7wi7a40" path="res://Resources/main_menu_themes.tres" id="2_p8itt"]
+
+[node name="HUD" type="CanvasLayer" unique_id=29406493]
+script = ExtResource("1_6xdta")
+
+[node name="HUDControl" type="Control" parent="." unique_id=2077216770]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_p8itt")
+
+[node name="TimeLabel" type="Label" parent="HUDControl" unique_id=1450388818]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -136.0
+offset_right = 136.0
+offset_bottom = 82.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64

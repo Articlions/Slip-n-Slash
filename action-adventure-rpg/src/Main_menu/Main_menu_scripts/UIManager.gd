@@ -16,11 +16,18 @@ func _ready() -> void:
 	singleplayer_button.pressed.connect(_on_singleplayer_button_pressed) # first time i connected through Code!
 	quit_button.pressed.connect(_on_quit_button_pressed) # and then we do it again yeah!
 	
+	
+	# YESSSSSIIIIR i finally figured out how to do platform conditional things
+	# SKILLLLLL UNLOCKED!!!!
+	
 	if OS.has_feature("linux"):
 		multiplayer_button.disabled = true
 		multiplayer_button.hide()
 		
 	if OS.has_feature("android"):
+		quit_button.disabled = true
+		quit_button.hide()
+	if OS.has_feature("web"):
 		quit_button.disabled = true
 		quit_button.hide()
 	
