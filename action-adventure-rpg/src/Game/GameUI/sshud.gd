@@ -6,13 +6,17 @@ extends CanvasLayer
 # anyways!
 
 @onready var time_label: Label = $HUDControl/TimeLabel
-var time = Time.get_time_string_from_system(true)
 
 
 func _ready() -> void:
-	time_label.text = time
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	var current_time = Time.get_time_dict_from_system()
+	
+	var time_nowformatted: String = "%02d:%02d:%02d" % [current_time.hour, current_time.minute, current_time.second]
+	time_label.text = time_nowformatted
+
+
 	pass

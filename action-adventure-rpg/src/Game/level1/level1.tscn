@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://nr7xaeytcyhh" path="res://src/Enemies/bat_enemy.tscn" id="3_n0say"]
 [ext_resource type="PackedScene" uid="uid://03w4hfogw4li" path="res://src/Game/GameUI/touch_controls.tscn" id="4_rp33q"]
 [ext_resource type="PackedScene" uid="uid://cym4ibjt2iced" path="res://src/Game/GameUI/pause_menu.tscn" id="5_5oc2e"]
+[ext_resource type="PackedScene" uid="uid://cb0hewhi85qh3" path="res://src/Game/GameUI/SSHUD.tscn" id="6_0eqjy"]
 
 [node name="Game" type="Node" unique_id=487217411]
 
@@ -26,3 +27,5 @@ position = Vector2(320, 264)
 
 [node name="PauseMenu" parent="." unique_id=2045192081 instance=ExtResource("5_5oc2e")]
 visible = false
+
+[node name="HUD" parent="." unique_id=29406493 instance=ExtResource("6_0eqjy")]
