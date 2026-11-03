@@ -20,12 +20,93 @@ ACCELERATION = 900.0
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1386458776]
 
-[node name="BatEnemy2" parent="Node2D" unique_id=551867235 instance=ExtResource("3_n0say")]
+[node name="BatEnemy4" parent="Node2D" unique_id=551867235 instance=ExtResource("3_n0say")]
+position = Vector2(-386, 295)
+
+[node name="Batman" parent="Node2D" unique_id=884218547 groups=["Enemies"] instance=ExtResource("3_n0say")]
 position = Vector2(320, 264)
+
+[node name="BatEnemy" parent="Node2D" unique_id=687387731 instance=ExtResource("3_n0say")]
+position = Vector2(-603, 402)
+
+[node name="BatEnemy3" parent="Node2D" unique_id=1173366097 instance=ExtResource("3_n0say")]
+position = Vector2(-192, 826)
+
+[node name="BatEnemy5" parent="Node2D" unique_id=1486045941 instance=ExtResource("3_n0say")]
+position = Vector2(778, 188)
+
+[node name="BatEnemy6" parent="Node2D" unique_id=1067961598 instance=ExtResource("3_n0say")]
+position = Vector2(31, 317)
+
+[node name="BatEnemy2" parent="Node2D" unique_id=359383839 instance=ExtResource("3_n0say")]
+position = Vector2(1167, 854)
+
+[node name="BatEnemy7" parent="Node2D" unique_id=838385262 instance=ExtResource("3_n0say")]
+position = Vector2(175, 866)
+
+[node name="BatEnemy8" parent="Node2D" unique_id=211991345 instance=ExtResource("3_n0say")]
+position = Vector2(-377, 725)
+
+[node name="BatEnemy9" parent="Node2D" unique_id=1271854230 instance=ExtResource("3_n0say")]
+position = Vector2(944, -119)
+
+[node name="BatEnemy10" parent="Node2D" unique_id=628253380 instance=ExtResource("3_n0say")]
+position = Vector2(1490, 782)
+
+[node name="BatEnemy11" parent="Node2D" unique_id=616695030 instance=ExtResource("3_n0say")]
+position = Vector2(-816, 1164)
+
+[node name="BatEnemy12" parent="Node2D" unique_id=1462697111 instance=ExtResource("3_n0say")]
+position = Vector2(-647, 1004)
+
+[node name="BatEnemy13" parent="Node2D" unique_id=774115461 instance=ExtResource("3_n0say")]
+position = Vector2(-66, 1039)
+
+[node name="BatEnemy14" parent="Node2D" unique_id=539195941 instance=ExtResource("3_n0say")]
+position = Vector2(-487, 1186)
+
+[node name="BatEnemy15" parent="Node2D" unique_id=807733904 instance=ExtResource("3_n0say")]
+position = Vector2(-882, 160)
+
+[node name="BatEnemy16" parent="Node2D" unique_id=1545111926 instance=ExtResource("3_n0say")]
+position = Vector2(1214, 188)
+
+[node name="BatEnemy17" parent="Node2D" unique_id=1796006581 instance=ExtResource("3_n0say")]
+position = Vector2(1092, -207)
+
+[node name="BatEnemy18" parent="Node2D" unique_id=837406350 instance=ExtResource("3_n0say")]
+position = Vector2(1534, 1064)
+
+[node name="BatEnemy19" parent="Node2D" unique_id=1560570118 instance=ExtResource("3_n0say")]
+position = Vector2(-584, 739)
+
+[node name="BatEnemy20" parent="Node2D" unique_id=1688511694 instance=ExtResource("3_n0say")]
+position = Vector2(941, 161)
+
+[node name="BatEnemy21" parent="Node2D" unique_id=1448023029 instance=ExtResource("3_n0say")]
+position = Vector2(781, -331)
+
+[node name="BatEnemy22" parent="Node2D" unique_id=149968412 instance=ExtResource("3_n0say")]
+position = Vector2(1682, 491)
+
+[node name="BatEnemy23" parent="Node2D" unique_id=945949263 instance=ExtResource("3_n0say")]
+position = Vector2(-1253, 296)
+
+[node name="BatEnemy24" parent="Node2D" unique_id=1776935941 instance=ExtResource("3_n0say")]
+position = Vector2(-1020, 1316)
+
+[node name="BatEnemy25" parent="Node2D" unique_id=1360272820 instance=ExtResource("3_n0say")]
+position = Vector2(-145, 1354)
+
+[node name="BatEnemy26" parent="Node2D" unique_id=591407614 instance=ExtResource("3_n0say")]
+position = Vector2(495, 937)
+
+[node name="BatEnemy27" parent="Node2D" unique_id=688514395 instance=ExtResource("3_n0say")]
+position = Vector2(-252, 579)
 
 [node name="CanvasLayer" parent="." unique_id=1795987959 instance=ExtResource("4_rp33q")]
 
 [node name="PauseMenu" parent="." unique_id=2045192081 instance=ExtResource("5_5oc2e")]
 visible = false
 
-[node name="HUD" parent="." unique_id=29406493 instance=ExtResource("6_0eqjy")]
+[node name="HUD" parent="." unique_id=29406493 groups=["Enemies"] instance=ExtResource("6_0eqjy")]

@@ -14,3 +14,9 @@ signal player_died()
 
 
 signal pause_pressed()
+
+
+# We:re going to add some vaariables to make this a game manager 
+
+var is_dead: bool
+var has_succeded: bool

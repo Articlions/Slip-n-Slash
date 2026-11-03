@@ -25,26 +25,27 @@ var animation_playback: AnimationNodeStateMachinePlayback
 
 # -----------Variables Not onready--------
 @export_category("Player-Stats")
-@export var SPEED: float = 300.0
+@export var SPEED: float = 600.0
 @export var FRICTION: float = 200
 @export var ACCELERATION: float = 700
 @export var current_state: States = States.IDLE
-@export var attack_speed: float = 0.5
+@export var attack_speed: float = 0.3
 @export var attack_damage: int = 50
-@export var health_points: int = 250
+@export var health_points: int = 600
 
 
 # -------------Varibles not Exported hahahaha------------
 var direction_vector := Vector2.ZERO
 var negative_vector: Vector2
 var walk_direction: Vector2 
-
+var max_healthpoints: int
 
 
  # in ready i meade sure to set the inital animation and the playback!
 func _ready() -> void:
 	animation_playback = animation_tree.get("parameters/StateMachine/WalkState/playback")
 	animation_playback.travel("IdleState")
+	max_healthpoints = health_points
 
 
 
@@ -75,6 +76,7 @@ func change_state(new_state: States):
 		
 func take_damage(damage_amount: int) -> void: 
 	health_points -= damage_amount
+	Eventmanager.damaged.emit( (health_points * 100) / max_healthpoints)
 	print("Damage Taken Health: ",  health_points)
 	if health_points <= 0:
 		death_process()
