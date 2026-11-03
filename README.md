@@ -1,27 +1,26 @@
-# Cinnamon Desktop On Github Codespace
-This setup installs an Ubuntu 24.04 container with the Cinnamon desktop environment and configures a VNC connection.
+# Slip 'n Slash(action-adventure RPG)
+What this is
+This is now my fourth game i think this is a milestone a different genre.  Its a top down game rather a platformer
+Why I made this🏗️
+Firstly I started a month or so after i finished my third game. I thought it would be great  and i had a whole lot of fun
 
-Running a desktop environment in Codespaces is generally permitted, as Microsoft themselves provide documentation for setting up a Fluxbox-based desktop with a browser: https://github.com/devcontainers/features/tree/main/src/desktop-lite. In this case, we’ll be using Cinnamon instead. You don’t need to worry about account issues as long as you use the service responsibly and stay within GitHub’s Terms of Service.
 
-# How to use
-1. Create a new space: https://github.com/codespaces/new
-2. Select this repo `AndnixSH/codespace-desktop`
-3. Select a machine type. To unlock better machine types, file a ticket to Github: https://support.github.com/contact?tags=rr-codespaces%2Ccat_codespace
-4. Click "Create codespace". It will take a while to create
-5. Once created, open PORTS tab, open forwarded address, click on `vnc.html` link and enter your VNC password
 
-The default VNC password is just `password`. You can change it using `vncpasswd` in Terminal. You don't need to worry about weak password because the vnc ports are not public by default, accessing the ports requires your Github account to be logged in. This makes it a lot secure
+# A few more credits✅
+* Some assets I did not have enough time in the game to write a Credits I will write here.
+* Me! obviously i made a few assets some months back that i just slapped onto here 
+* Tiny Swords by Pixel Frog (It was a lifesaver)
+* Bat-Enemy I kinda forgot/couldnt find the name (I got it from itch io)
+* Adventurer 2D Top-Down by Mattz Art
+* Free Ocean and Clouds Pixel Backgrounds by	Free Game Assets (GUI, Sprite, Tilesets) Yeah i know thats a name
+* Peaberry Pixel Font by Emily Huo
 
-The default keyboard layout is English (US). You can change it in Cinnamon settings
 
-To run Windows app, install Wine: https://wiki.winehq.org/Ubuntu
 
-# Limitations & bugs
-- No hardware acceleration because Codespace does not have a GPU
-- Terminal won't open. Use Xfce Terminal or others instead
 
-# Screenshots
 
-![2024-05-31 20 36 02](https://github.com/AndnixSH/codespace-desktop/assets/40742924/efe23986-9024-457f-8e10-d04ac1898b18)
+# AI Disclaimer
+This time around i tried using the least amount of ai possible and i think it worked but had to use a littel to help debugging (and to still wrap my head around the Godot API but i did not need it for that as much ) I must reiterate this is not vibe-coded whatsoever and it was still handcoded with my creativity and any AI generated code (which is very little) is looked at by me and i tried to learn and understand it before dropping it in.  Moreover the art that I made was without help from AI generating it as well.
 
-![2024-05-31 20 35 27](https://github.com/AndnixSH/codespace-desktop/assets/40742924/5ddd627e-d48f-413c-a153-dff1173e75de)
+# Nice but where do I play the Demo
+TODO
