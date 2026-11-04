@@ -15,6 +15,19 @@ Firstly I started a month or so after i finished my third game. I thought it wou
 * Free Ocean and Clouds Pixel Backgrounds by	Free Game Assets (GUI, Sprite, Tilesets) Yeah i know thats a name
 * Peaberry Pixel Font by Emily Huo
 
+# Big Disclaimer 
+* Assets will not be distributed because of licensing issues. Pretty much you can use it but dont distribute it so I will skip 
+on them though the binaries do have them obviously;)
+
+# How this was made
+This is something new but i'll try it.  
+So the idea for this game started back a while ago about eairler this year in the spring right around the time i finished my second ever game.
+In this game I new that I had to make better archetural decisions.
+For example I used the animation tree over making my own code based one which honestly was a step in the right direction.
+Surpriingly I found out that what I needed was not a node based Finite State Machine but just an Enum which was better for me anyway.
+I still kept the code but disabled it so it would conflict i kept it there just so i didnt delete it.
+The best part about this game is that it finally now has android support.
+I've always wanted to add android support now i do have it I will defeinatly try to make sure my furture games support more than web and desktop(which I also now have support for;).
 
 
 
