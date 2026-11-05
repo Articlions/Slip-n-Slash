@@ -15,12 +15,13 @@ extends Control
 func _ready() -> void:
 	singleplayer_button.pressed.connect(_on_singleplayer_button_pressed) # first time i connected through Code!
 	quit_button.pressed.connect(_on_quit_button_pressed) # and then we do it again yeah!
+	$Panel/VBoxContainer/Help_Button.pressed.connect(_on_help_button_pressed) # now a different way to see if it works
 	
 	
 	# YESSSSSIIIIR i finally figured out how to do platform conditional things
 	# SKILLLLLL UNLOCKED!!!!
 	
-	if OS.has_feature("linux"):
+	if OS.has_feature("linux") or OS.has_feature("android") or OS.has_feature("web"):
 		multiplayer_button.disabled = true
 		multiplayer_button.hide()
 		
@@ -36,3 +37,7 @@ func _on_singleplayer_button_pressed():
 	
 func _on_quit_button_pressed():
 	get_tree().quit()
+
+
+func _on_help_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://src/Game/GameUI/help+credits.tscn")

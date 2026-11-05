@@ -10,7 +10,7 @@ Firstly I started a month or so after i finished my third game. I thought it wou
 * Some assets I did not have enough time in the game to write a Credits I will write here.
 * Me! obviously i made a few assets some months back that i just slapped onto here 
 * Tiny Swords by Pixel Frog (It was a lifesaver)
-* Bat-Enemy I kinda forgot/couldnt find the name (I got it from itch io)
+* Bat-Enemy By Eduardo Scarpato (Got this quick and easy)
 * Adventurer 2D Top-Down by Mattz Art
 * Free Ocean and Clouds Pixel Backgrounds by	Free Game Assets (GUI, Sprite, Tilesets) Yeah i know thats a name
 * Peaberry Pixel Font by Emily Huo

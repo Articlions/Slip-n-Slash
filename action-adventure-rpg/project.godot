@@ -14,7 +14,7 @@ config/name="Action Adventure RPG"
 run/main_scene="uid://cbiefyjwd3nf0"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/image="uid://w2irr788ool2"
-config/icon="res://icon.svg"
+config/icon="uid://bwd3epe2s0nfh"
 
 [autoload]
 

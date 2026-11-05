@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://wit7lbssr5gn"]
+
+[ext_resource type="Script" uid="uid://s2mp4tekbrwt" path="res://src/Game/GameUI/help+credits.gd" id="1_rhpyk"]
+[ext_resource type="FontFile" uid="uid://dyboxb7nualxl" path="res://assets/rpg_fonts/PeaberryBase.ttf" id="1_tq78i"]
+
+[node name="Control" type="Control" unique_id=1180139167]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rhpyk")
+
+[node name="Panel" type="Panel" parent="." unique_id=405869937]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="Panel" unique_id=428168990]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -173.5
+offset_right = 1271.0
+offset_bottom = 173.5
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_tq78i")
+theme_override_font_sizes/font_size = 31
+text = "How to play?
+On web: use the W/S/A/D  or the 
+arrow Keys to move around  press the K key to attack 
+and push tab or escape to pause the game. 
+On Android: use the joystick on the screen to move around 
+and push the sword button on the screen to 
+attack
+to pause there is a pause button on the screen as in addition.
+
+"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Panel" unique_id=1442148083]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 2.0
+offset_right = 168.0
+offset_bottom = 78.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_tq78i")
+theme_override_font_sizes/font_size = 75
+text = "Help"
+
+[node name="BackButton" type="Button" parent="." unique_id=492157481]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 1
+offset_right = 332.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource("1_tq78i")
+theme_override_font_sizes/font_size = 55
+text = "Back"

@@ -77,7 +77,7 @@ func change_state(new_state: States):
 func take_damage(damage_amount: int) -> void: 
 	health_points -= damage_amount
 	Eventmanager.damaged.emit( (health_points * 100) / max_healthpoints)
-	print("Damage Taken Health: ",  health_points)
+	# print("Damage Taken Health: ",  health_points)
 	if health_points <= 0:
 		death_process()
 
@@ -148,7 +148,7 @@ func death_process():
 
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
-	print("HITBOX DETECTED: ", area.name)
-	print("AREA OWNER: ", area.owner)
+	# print("HITBOX DETECTED: ", area.name)
+	# print("AREA OWNER: ", area.owner)
 
 	area.owner.take_damage(attack_damage)

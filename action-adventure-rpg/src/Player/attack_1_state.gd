@@ -36,11 +36,9 @@ func _handle_input(event: InputEvent):
 	
 func _on_animation_finished(anim_name: String):
 	
-	# Print debuggers
+	# Print debuggers--Now! Deleted
 	
-	# TODO: delete them
-	print("Animation_fiinished: ",  anim_name)
-	print("Inner animation state: ", animation_playback.get_current_node())
+	
 	
 	# NEW SKILL!!!!!!!
 	# match anim_name:

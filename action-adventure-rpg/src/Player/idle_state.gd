@@ -20,7 +20,7 @@ func enter_state():
 	
 func _handle_input(event: InputEvent):
 	if Input.is_action_pressed("action_left") or Input.is_action_pressed("action_right"):
-		print("LEFT/RIGHT DETECTED")
+		# print("LEFT/RIGHT DETECTED")
 
 		state_machine.change_state("walkstate")
 		

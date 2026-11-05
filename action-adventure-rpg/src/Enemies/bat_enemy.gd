@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 
 	if distance <= attack_range:
 		current_state = States.ATTACK
-		print("Im gonna get you")
+		# print("Im gonna get you")
 		enemy_attack()
 		
 	elif distance_to_player() <= aggro_range:
@@ -121,7 +121,7 @@ func take_damage(damage_amount: int) -> void:
 	
 	
 	health_points -= damage_amount
-	print("Damage Taken Health: ",  health_points)
+	# print("Damage Taken Health: ",  health_points)
 	if health_points <= 0:
 		death()
 
