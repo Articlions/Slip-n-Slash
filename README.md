@@ -42,5 +42,5 @@ I've always wanted to add android support now i do have it I will defeinatly try
 This time around i tried using the least amount of ai possible and i think it worked but had to use a littel to help debugging (and to still wrap my head around the Godot API but i did not need it for that as much ) I must reiterate this is not vibe-coded whatsoever and it was still handcoded with my creativity and any AI generated code (which is very little) is looked at by me and i tried to learn and understand it before dropping it in.  Moreover the art that I made was without help from AI generating it as well.
 
 # Nice but where do I play the Demo
-You can play the demo on the web here: 
-Or you could navigate to the folder action-adventure-rpg/Releases/android and download the apk (through the web client not that github mobile app)
+* You can play the demo on the web here: https://ssweb-plum.vercel.app
+* Or you could navigate to the folder action-adventure-rpg/Releases/android and download the apk (through the web client not that github mobile app)
