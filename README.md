@@ -1,8 +1,14 @@
 # Slip 'n Slash(action-adventure RPG)
 What this is
-This is now my fourth game i think this is a milestone a different genre.  Its a top down game rather a platformer
+This is now my fourth game In Godot 4 i think this is a milestone a different genre.  Its a top down game rather a platformer
 Why I made this🏗️
 Firstly I started a month or so after i finished my third game. I thought it would be great  and i had a whole lot of fun
+
+
+# Controls
+The controls to move up, down, left and right are W, S, A, D or the up down left and right keys and push K to attack and to pause push the escape key. 
+On android there is a pause button a virtual joystick to move around and an attack button that looks like a sword. 
+When you push it you are able to attack.
 
 
 
